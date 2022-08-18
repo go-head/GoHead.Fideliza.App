@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "GoHead.Fideliza.App",
+    "slug": "GoHead.Fideliza.App",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
