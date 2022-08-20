@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Text, View } from 'react-native';
 import { Button } from '../components/Button';
-import { AuthContext } from '../contexts/Auth';
+import { useAuth } from '../contexts/Auth';
 
 export function Account() {
-  const {signOut} = useContext(AuthContext);
+  const {signOut} = useAuth();
 
   function handleSignOut(){
     signOut();
   }
-  
+
   return (
     <View style={{ flex: 1, backgroundColor: 'orange', justifyContent: 'center'}}>
         <Text>Perfil</Text>

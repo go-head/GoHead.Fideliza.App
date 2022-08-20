@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { AuthProvider } from './src/contexts/Auth';
 import { Routes } from './src/routes';
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <NavigationContainer>
       <AuthProvider>
@@ -11,4 +11,6 @@ export default function App() {
       </AuthProvider>
     </NavigationContainer>
   );
-}
+};
+
+export default App;
