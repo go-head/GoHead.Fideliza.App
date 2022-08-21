@@ -4,7 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 import { Statement } from '../screens/Statement';
 import { Wallet } from '../screens/Wallet';
 import { Partner } from '../screens/Partner';
-import { Account } from '../screens/Account';
+import { Person } from '../screens/Person';
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
@@ -59,8 +59,9 @@ export function AppRoutes() {
             />
             <Screen
                 name='Perfil'
-                component={Account}
+                component={Person}
                 options={{
+                    headerShown: false,
                     title: 'Perfil',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialIcons

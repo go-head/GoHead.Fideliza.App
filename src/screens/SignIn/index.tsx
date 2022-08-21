@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Button } from '../components/Button';
-import { InputText } from '../components/InputText';
-import { useAuth } from '../contexts/Auth'
+import { Button } from '../../components/Button';
+import { InputText } from '../../components/InputText';
+import { useAuth } from '../../contexts/Auth'
 
 const styles = StyleSheet.create({
   container: {
