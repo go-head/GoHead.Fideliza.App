@@ -36,6 +36,7 @@ export function AppRoutes() {
                 component={Wallet}
                 options={{
                     title: 'Carteira',
+                    headerTitleAlign: 'center',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialIcons
                             name="account-balance-wallet"

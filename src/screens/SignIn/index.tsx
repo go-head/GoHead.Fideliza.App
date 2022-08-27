@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { Dimensions, Image, View } from 'react-native';
 import { Button } from '../../components/Button';
 import { InputText } from '../../components/InputText';
 import { useAuth } from '../../contexts/Auth'
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-})
+import { KeyboardContainer } from './styles';
+import logoImg from '../../assets/logo.png'
+const window = Dimensions.get('window');
 
 export function SignIn() {
   const [email, setEmail] = useState('');
@@ -23,7 +18,8 @@ export function SignIn() {
 
   return (
 
-    <View style={styles.container}>
+    <KeyboardContainer behavior="padding"  >
+      <Image source={logoImg} resizeMode="contain" style={{ height: window.width / 3, marginBottom: 20 }} />
       <InputText placeholder='e-mail' textContentType='emailAddress' value={email} onChangeText={setEmail} />
       <InputText
         secureTextEntry
@@ -33,6 +29,6 @@ export function SignIn() {
         onChangeText={setPassword}
       />
       <Button title='Entrar' onPress={handleSignIn} />
-    </View>
+    </KeyboardContainer>
   );
 }
